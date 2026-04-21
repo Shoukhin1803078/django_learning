@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from home import views
 from blog import views as blog_views
 
@@ -24,4 +24,5 @@ urlpatterns = [
     path('', views.home_function, name='home'),
     path('home/', views.home_function, name='home'),
     path('blog/', blog_views.blog_function, name='blog'),
+    path('api/', include('api.urls')),  # এই লাইন যোগ করুন
 ]
