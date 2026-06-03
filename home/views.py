@@ -6,7 +6,7 @@ from django.http import JsonResponse
 
 # এটি আমাদের হোম পেজের ফাংশন
 def home1(request):
-    return HttpResponse("হ্যালো! এটি আমার প্রথম ডিজ্যাঙ্গো প্রোজেক্ট।")
+    return HttpResponse("Hello World ! This is my first Django project.")
     
 def home2(request):
     return JsonResponse({
